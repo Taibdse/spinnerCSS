@@ -1,0 +1,64 @@
+.spinner:before{
+    content: '';
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    border-bottom: 3px solid green;
+    position: fixed;
+    top: 50%;
+    left: 50%;;
+    margin-top: -30px;
+    margin-left: -30px;
+    z-index: 10;
+    animation: spinner 1s linear infinite;
+}
+
+.left-to-right{
+    animation: left-to-right .7s linear 1;
+    position: relative;
+}
+.top-to-bottom{
+    animation: top-to-bottom .7s ease-in 1;
+    position: relative;
+}
+.fade-in{
+    animation: fade-in .7s ease-in-out 1;
+}
+.right-to-left{
+    animation: right-to-left .7s ease-in 1;
+    position: relative;
+}
+
+@keyframes spinner{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+
+@keyframes left-to-right {
+    from{left: -500px;}
+    to{left: 0px;}
+}
+
+@keyframes top-to-bottom {
+    from{top: -500px;}
+    to{top: 0px;}
+}
+
+@keyframes fade-in{
+    from{opacity: 0;};
+    to{opacity: 1;};
+}
+
+@keyframes right-to-left{
+    from{right: -500px}
+    to{right: 0px}
+}
+
+.card{
+    transition: all 0.3s;
+}
+.card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
